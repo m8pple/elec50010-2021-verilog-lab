@@ -48,7 +48,7 @@ The main installation steps for Ubuntu (e.g. 20.04) are:
 2.  Install pre-requisite libraries and packages:
     
     ```sh
-    apt get gperf autoconf bison gcc make
+    sudo apt install gperf autoconf bison gcc make
     ```
 
     This should be enough for Ubuntu 20.04, and probably other recent Ubuntus and other distros.,
@@ -199,7 +199,7 @@ main phases:
     command continuation:
     ```bash
     $ iverilog -Wall -g 2012 -s and_not_testbench -o and_not_testbench \
-         and_gate.v or_gate.v  
+         and_gate.v not_gate.v and_not_testbench.v
     ```
 
     This command compiles the Verilog modules into a simulation
