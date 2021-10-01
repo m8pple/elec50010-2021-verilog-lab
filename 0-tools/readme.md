@@ -287,7 +287,8 @@ needs to be modified to produce them.
 
     - Install GTWave in Windows, and use file-sharing between the WSL guest and
       windows host. For example, if you have a file `~/wibble.vcd` in WSL, you
-      can open it as `wsl://home/USER/wibble.vcd` in a Windows programme.
+      can open it as `\\wsl$:\home\$USER\wibble.vcd` in a Windows programme
+      (this assumes you are using [WSL2](https://docs.microsoft.com/en-us/windows/wsl/compare-versions)).
 
 6.  In the top-left panel of GTKWave (marked SST), right-click
     on `and_not_testbench`, and select `Recurse Import` -> `Append`.
