@@ -91,6 +91,12 @@ In total there are ~9000 words in the instructions, which is about 30 minutes
 for most readers. So it is suggested that you individually read the whole thing
 through once first, then come back and do the more technical aspects.
 
+There is a [recorded version](https://imperial.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=596eb495-7bb1-476f-a33e-adb300f4b6fa)
+of going through [0-tools](0-tools), as sometimes people worry about getting started. The videos are only
+someone following the steps and instructions in the readme, and are mainly for people who read
+the instructions and don't know how to get started. If you are happy doing command-line/linux
+work then it probably isn't worth watching.
+
 A suggested path is to do earlier sections individually, then come together
 as a group for the later sections, but it is up to you.
 
