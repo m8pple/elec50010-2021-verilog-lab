@@ -4,7 +4,7 @@ Assessment
 This lab is assessed in two ways:
 
 - Through a group lab mid-term assessment.
-- Through a peer evaluation which can adjust module marks from the oral.
+- Through a peer evaluation which can adjust module marks from the mid-term.
 
 The purpose of the mid-term is to assess the group's understanding of
 core skills related to developing clocked synchronous circuits
@@ -44,8 +44,8 @@ and there will be a single submission for the group.
 Your submission will consist of zip file submitted via the group
 via Blackboard (as it is the easiest way of gathering such things).
 
-An example set of tasks will be made available, including how
-to submit.
+An example set of tasks is included in the directory
+[`exercises`](exercises).
 
 Assessment is purely mechanical in the first instance, as the
 tasks are designed to be simple and so can easily be checked
@@ -57,6 +57,32 @@ the task solution and the spec, such as mis-named variables,
 or mild deviations. However, this does not cover cases such
 as code that has never compiled, or sketches of solutions.
 
+**Pre-emptive comment on timing.** : the mid-term assessment
+is expected to happen _after_ you have learnt the material
+from the lab and the first four weeks of lectures. If you
+are learning the preliminary info _while_ doing the exercises they will inevitably
+take longer. The least efficient method is simply to go straight
+for the assessment exercises, as it means you'll need to learn
+things on demand. It would be the equivalent of starting a
+module by working through past-papers, then going back to
+lectures on-demand every time something unknown was encountered.
+
+If the course is followed roughly on the timeline suggested then
+it is hoped there will be expertise built up in a progressive way:
+
+- The first couple of weeks of lectures set up knowledge for the lab
+- Looking at the lab individually prepares you to discuss it with your team
+- Working on the lab as a team prepares you to try the practise assessments
+- Working on the practise assessments as a team prepares your for the mid-term
+- The skills and knowledge from the mid-term and lecture course prepare you for
+  the coursework.
+
+Ideally you are looking for a continuous learning process, where
+each set of skills and knowledge gained supports the next step. The least
+efficient approach is to leave everything until you are trying to
+design and build a working CPU, then try to go from "not knowing verilog
+or how a CPU works" to "implement a CPU in Verilog" in one step.
+
 Peer evaluation
 ---------------
 
@@ -65,7 +91,7 @@ Monday following mid-term, which is intended to reflect how well people worked w
 and contributed to the group. It is not intended to assess your
 team-mates knowledge or technical ability, it is more about the
 way that they work. You'll only have had limited time interacting
-with your team-mates over the few weeks preceding the mid-term orals,
+with your team-mates over the few weeks preceding the mid-term assessment,
 but this exercise is intended to prepare you for peer evaluation
 during the group project, and also to identify any particularly
 weak (or strong) performance that needs to be fixed.
@@ -115,7 +141,7 @@ a very strong signal to send to someone, and should be based on very poor perfor
 The peer assessment will be used for two purposes:
 
 - To provide aggregate feedback to each student so they know how they are performing
-- To modulate individual marks by _at most_ plus or minus 10% on the group oral mark.
+- To modulate individual marks by _at most_ plus or minus 10% on the group mid-term mark.
     However, in most cases the swing is likely to be plus or minus 1-2% (based on
     previous experience with peer feedback).
 
