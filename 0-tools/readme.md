@@ -54,7 +54,7 @@ The main installation steps for Ubuntu (e.g. 20.04) are:
     Install pre-requisite libraries and packages:
     
     ```sh
-    sudo apt install gperf autoconf bison gcc make flex
+    sudo apt install gperf autoconf bison gcc make flex build-essential
     ```
 
     This should be enough for Ubuntu 20.04, and probably other recent Ubuntus and other distros.,
