@@ -32,7 +32,7 @@ including Linux, OSX, and Windows.
 While Icarus can be installed via `apt get Verilog` under Ubuntu, this will not get the
 latest version, and you may encounter unsupported features or bugs. In particular,
 you may find that the Ubuntu versions don't support `always_comb` and `always_ff`. It is recommended
-that you [compile and install it from scratch](https://iverilog.fandom.com/wiki/Installation_Guide).
+that you [compile and install it in Ubuntu from scratch](https://iverilog.fandom.com/wiki/Installation_Guide).
 This both ensures that you have the latest version, and also shows you the standard
 process for compiling and installing many software packages.
 
@@ -45,10 +45,16 @@ The main installation steps for Ubuntu (e.g. 20.04) are:
     cd iverilog
     ```
 
-2.  Install pre-requisite libraries and packages:
+2.  Update Ubuntu's list of packages:
+
+    ```
+    sudo apt update
+    ```
+
+    Install pre-requisite libraries and packages:
     
     ```sh
-    sudo apt install gperf autoconf bison gcc make flex g++
+    sudo apt install gperf autoconf bison gcc make flex build-essential
     ```
 
     This should be enough for Ubuntu 20.04, and probably other recent Ubuntus and other distros.,
