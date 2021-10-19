@@ -40,7 +40,7 @@ This both ensures that you have the latest version, and also shows you the stand
 process for compiling and installing many software packages.
 
 _**Note** (2021/10/18) : _If you are using `brew` in OSX, then the following commands will not all_
-_work. However, the version of `iverilog` available through brew is much more recent than the_
+_work. However, the version of `iverilog` (called `icarus-verilog`) available through brew is much more recent than the_
 _version packaged with Ubuntu 20.04, so can be used instead._
 
 The main installation steps for Ubuntu (e.g. 20.04) are:

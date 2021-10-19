@@ -121,14 +121,28 @@ and simply install it directly via brew, as they have quite a recent version of
 `iverilog`. For this the process is:
 
 1.  Install [Homebrew](https://brew.sh/)
-2.  Install the `iverilog` package:
+2.  Install the `icarus-verilog` package:
     ```
-    $ brew install iverilog
+    $ brew install icarus-verilog
     ```
 
 From this point on you may want to install other tools, and you can install them
 using the `brew` command. If you see us talking about `apt install`
 in the context of Ubuntu, the brew equivalent is _usually_ `brew install`.
+
+For examples of the kinds of incompatibilities that are found:
+
+- The scripts in [build_utils.sh](../4-verilog-mu0/build_utils.sh) compiles some programs using
+  `g++`, and assumes that the compiler will select at least the [C++11](https://en.wikipedia.org/wiki/C%2B%2B11)
+  revision of the language from 2011. However, Apple use the `clang` compiler (a fine compiler), which pretends
+  to be `g++`, and does not choose c++11 by default. So to get it to run in OSX it was necessary to
+  add the `-std=c++11` flag to the compilation statement.
+
+- The version of Icarus verilog that comes with brew by default is version 11 (at the time of writing),
+  which is one release behind the main version of Icarus. As a consequence it is more restricted in the
+  order of parameters, and _requires_ that all source files appear after parameters. Later versions 
+  allow them to be mixed (in the same that `g++` does).
+  
 
 ### Installing Ubuntu in a Virtual Machine
 
