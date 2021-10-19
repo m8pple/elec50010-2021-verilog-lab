@@ -48,11 +48,14 @@ The main installation steps for Ubuntu (e.g. 20.04) are:
 2.  Install pre-requisite libraries and packages:
     
     ```sh
-    sudo apt install gperf autoconf bison gcc make
+    sudo apt install gperf autoconf bison gcc make flex g++
     ```
 
     This should be enough for Ubuntu 20.04, and probably other recent Ubuntus and other distros.,
-    though there may be some missing libraries that get reported in the next steps.
+    though there may be some missing libraries that get reported in the next steps. If you get
+    a missing package then you can try `apt get update` and `apt get install _package_name_` to install it.
+
+    _Updated (2021/10/12) : added `flex` and `g++` needed for most recent 20.04 package list._
 
 3.  Use [GNU autotools](https://en.wikipedia.org/wiki/GNU_Autotools) to generate a configuration script:
 
