@@ -63,6 +63,10 @@ Structure
 
 The lab is organised into six sections:
 
+- [_-environments](_-environments) (_Added 2021/10/19_) The lab and coursework target
+  environment is Ubuntu, so this provides some background and suggestions on getting
+  access to Ubuntu or an Ubuntu-like environment.
+
 - [0-tools](0-tools) This describes how to get hold of the Verilog simulator we'll use,
     and some basic simulation tasks.
 
@@ -87,7 +91,7 @@ The lab is organised into six sections:
 Approach
 ========
 
-In total there are ~9000 words in the instructions, which is about 30 minutes
+In total there are ~10000 words in the instructions, which is about 40 minutes
 for most readers. So it is suggested that you individually read the whole thing
 through once first, then come back and do the more technical aspects.
 

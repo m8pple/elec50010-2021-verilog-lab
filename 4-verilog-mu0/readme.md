@@ -145,6 +145,44 @@ $ ./run_all.sh 2>/dev/null
   delay1, multiply, pass
 ```
 
+**Note** : _If you get an error message saying that a .sh script is not executable,_
+_you may need to change the [file permissions](https://en.wikipedia.org/wiki/File-system_permissions#Notation_of_traditional_Unix_permissions)._
+_This can be done using `chmod` to add the `x` (executable) permission. For example_:
+```
+$ chmod u+x run_all.sh
+```
+
+The scripts are all [Shell scripts](https://en.wikipedia.org/wiki/Shell_script), so they are
+scripts that run within a command-line shell. If you open one of them, for example [build_utils.sh](build_utils.sh)
+you can see it is a just a text file. Some of the lines should look familiar, for example, the call to `g++`
+is a command you could type on the command-line yourself. At it's core a shell script is just a way of
+collecting lots of commands that you might type into a script, and having all those commands execute in
+sequence as part of a script.
+
+There are also some other parts of note:
+
+-  The line `#!/bin/bash` at the top is called a [Shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)),
+   and tells the shell how to execute this file. In this case the shebang gives the path `/bin/bash`
+   which identifies the `bash` shell. So if you type in:
+   ```
+   $ ./run_all.sh
+   ```
+   then behind the scenes the shell will actually call:
+   ```
+   $ /bin/bash run_all.sh
+   ```
+
+-  `set -eou pipefail` is a trick used to [make scripts more robust](http://redsymbol.net/articles/unofficial-bash-strict-mode/).
+    If any of the programs in the script indicates a failure code (for example by using `exit(EXIT_FAILURE)`), then the
+    whole script will immediatly stop executing.
+
+-  `MU0_SRCS="utils/mu0_assembly.cpp utils/mu0_disassembly.cpp utils/mu0_simulate.cpp"` Is storing three filenames in a variable
+   called `MU0_SRCS`. Later on in the script we can retrieve the value of the vairable using  `${MU0_SRCS}`.
+
+-  `echo "Building MU0 utils" > /dev/stderr` is using the `echo` program to print `"Building MU0 utils"`, and then redirecting
+   it to `stderr`. This is very similar to using `std::cerr<<"Building MU0 utils<<"\n";` in a C++ program - it prints status
+   information that is not part of the true output of the program.
+
 Understanding the code and the infrastructure
 =============================================
 

@@ -29,12 +29,19 @@ a free and open-source simulator, available under the [LGPL](https://en.wikipedi
 It is purely a command-line simulator, and can be compiled and used under multiple operating systems
 including Linux, OSX, and Windows.
 
+_It is recommended that you perform all these steps in Ubuntu - see_
+_[the discussion on environments](../_-environments/readme.md) and how to get them installed._
+
 While Icarus can be installed via `apt get Verilog` under Ubuntu, this will not get the
 latest version, and you may encounter unsupported features or bugs. In particular,
 you may find that the Ubuntu versions don't support `always_comb` and `always_ff`. It is recommended
 that you [compile and install it in Ubuntu from scratch](https://iverilog.fandom.com/wiki/Installation_Guide).
 This both ensures that you have the latest version, and also shows you the standard
 process for compiling and installing many software packages.
+
+_**Note** (2021/10/18) : _If you are using `brew` in OSX, then the following commands will not all_
+_work. However, the version of `iverilog` available through brew is much more recent than the_
+_version packaged with Ubuntu 20.04, so can be used instead._
 
 The main installation steps for Ubuntu (e.g. 20.04) are:
 
@@ -261,6 +268,8 @@ needs to be modified to produce them.
     ```bash
     sudo apt install gtkwave
     ```
+
+    (If using OSX with `brew` this would probably be `brew install --cask gtkwave`).
 
 2.  Modify the test-bench to enable dumping of signals. At the point
     marked `/* INSERT WAVEFORM COMMANDS */` in `and_not_testbench.v`
