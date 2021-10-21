@@ -400,7 +400,7 @@ during simulation, including the values of pre-determined signals.
     they print. Replace all four existing `$display` statements with:
     ```Verilog
     if ( d != ~(a&b) ) begin
-        $display("Error : a=%d, b=%d, d=%d,  expected=%d", a, b, dk, ~(a&b));
+        $display("Error : a=%d, b=%d, d=%d,  expected=%d", a, b, d, ~(a&b));
     end
     ```
     This should ensure that the printing only happens when `d` has the wrong value.
