@@ -34,12 +34,6 @@ else:
 
 Until `reset` has been driven high and fallen, the outputs of the FSM are undefined (i.e. they can take any value).
 
-Note that the outputs are combinatorially driven as a function of the current state and inputs,
-so changing one of the inputs during a cycle should also change the outputs within that
-cycle.
-
-If the input sequence overflows either
-`sum` or `count` then the outputs are
-undefined until `reset` is driven high
-again (i.e. you can do anything you 
+If the input sequence overflows either `sum` or `count` then the outputs are
+undefined until `reset` is driven high again (i.e. you can do anything you 
 want if they overflow).
